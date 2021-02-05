@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ActionsDone from "./components/ActionsDone";
 import Form from "./components/Form";
+import CharacterTraits from "./components/CharacterTraits";
+
 import "./App.css";
 
 let initialActions = [
@@ -36,6 +38,8 @@ function App() {
         actions={actions}
         onRemove={(index) => removeAction(index)}
       />
+
+      <CharacterTraits />
     </div>
   );
 }
