@@ -1,0 +1,32 @@
+.btn-group-vertical .positive-traits {
+  background-color: transparent;
+}
+.btn-group-vertical .positive-traits.focus {
+  background-color: transparent;
+}
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 230px;
+  width: 600px;
+  margin-left: 40px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+p {
+  text-align: center;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active.nice {
+  background-color: rgb(109, 255, 72);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active.happy {
+  background-color: rgb(255, 184, 52);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active.brave {
+  background-color: rgb(232, 236, 0);
+}
