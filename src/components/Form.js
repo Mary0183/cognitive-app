@@ -33,7 +33,7 @@ const Form = (props) => {
               onChange={handleInputChange}
             ></input>
           </label>
-          <button type="submit">Add</button>
+          {/*<button type="submit">Add</button>*/}
         </form>
       </div>
     </>

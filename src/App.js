@@ -6,12 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
-let initialActions = [
-  { text: "Called mom" },
-  { text: "Helped my elderly neighbors" },
-  { text: "Donated to charity" },
-  { text: "Drank enough water" },
-];
+let initialActions = [];
 
 function App() {
   const [actions, setActions] = useState(initialActions);
