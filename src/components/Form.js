@@ -5,6 +5,12 @@ import "./Form.css";
 const Form = (props) => {
   const [text, setText] = useState(""); //state called text (activities)
   const [traits, setTraits] = useState([]);
+  const [niceTraits, setNiceTraits] = useState([]);
+
+  function handleNiceTraits(values) {
+    setNiceTraits(values);
+    console.log(values);
+  }
 
   function handleChange(values) {
     setTraits(values);
@@ -42,7 +48,10 @@ const Form = (props) => {
         </form>
       </div>
 
-      <ToggleButtonTraits onChange={(values) => handleChange(values)} />
+      <ToggleButtonTraits
+        onChange={(values) => handleChange(values)}
+        handleNiceTraits={handleNiceTraits}
+      />
     </>
   );
 };
