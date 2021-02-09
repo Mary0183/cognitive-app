@@ -1,8 +1,15 @@
 import React, { useState } from "react";
+import ToggleButtonTraits from "./ToggleButtonTraits";
 import "./Form.css";
 
 const Form = (props) => {
-  const [text, setText] = useState(""); //state called text
+  const [text, setText] = useState(""); //state called text (activities)
+  const [traits, setTraits] = useState([]);
+
+  function handleChange(values) {
+    setTraits(values);
+    console.log(values);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,7 +27,6 @@ const Form = (props) => {
         break;
     }
   };
-
   return (
     <>
       <div className="Form">
@@ -33,9 +39,10 @@ const Form = (props) => {
               onChange={handleInputChange}
             ></input>
           </label>
-          {/*<button type="submit">Add</button>*/}
         </form>
       </div>
+
+      <ToggleButtonTraits onChange={(values) => handleChange(values)} />
     </>
   );
 };

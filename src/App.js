@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ActionsDone from "./components/ActionsDone";
 import Form from "./components/Form";
-import ToggleButtonTraits from "./components/ToggleButtonTraits";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
@@ -9,8 +8,20 @@ import "./App.css";
 let initialActions = [];
 
 function App() {
-  const [actions, setActions] = useState(initialActions);
-  const [isChecked, setIsChecked] = useState([]);
+  const [activity, setActivity] = useState([]);
+  const [actions, setActions] = useState(initialActions); //action
+
+  // const onAddActivity = (e) => {
+  //   e.preventDefault();
+
+  //   setActivity([
+  //     ...activity,
+  //     {
+  //       action: actions,
+  //       traits: taits,
+  //     },
+  //   ]);
+  // };
 
   function addAction(text) {
     //this is coming up from the Form to the App
@@ -24,12 +35,6 @@ function App() {
     setActions(newList);
   }
 
-  function activeCheckbox(value) {
-    console.log(value);
-    let checkedBoxes = { value };
-    setIsChecked((isChecked) => [...isChecked, checkedBoxes]);
-  }
-
   return (
     <div className="App">
       <h1>What made me feel good today...</h1>
@@ -41,8 +46,6 @@ function App() {
         actions={actions}
         onRemove={(index) => removeAction(index)}
       />
-
-      <ToggleButtonTraits onChange={(value) => activeCheckbox(value)} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
@@ -12,10 +12,10 @@ function ToggleButtonTraits(props) {
           <p>Nice</p>
           <ToggleButtonGroup
             onChange={(values) => {
-              console.log(values);
+              props.onChange(values);
             }}
             type="checkbox"
-            name="traits"
+            name="traits1"
             vertical="false"
           >
             <ToggleButton className="positive-traits nice" value={"helpful"}>
@@ -42,10 +42,10 @@ function ToggleButtonTraits(props) {
           <p>Happy</p>
           <ToggleButtonGroup
             onChange={(values) => {
-              console.log(values);
+              props.onChange(values);
             }}
             type="checkbox"
-            name="traits"
+            name="traits2"
             vertical="false"
           >
             <ToggleButton className="positive-traits happy" value={"cheerful"}>
