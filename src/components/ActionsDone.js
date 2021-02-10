@@ -8,7 +8,7 @@ function ActionsDone(props) {
         <ul>
           {props.actions.map((action, index) => (
             <li key={index}>
-              {action.text}
+              {action.action}
               <button onClick={() => props.onRemove(index)}>Remove</button>
             </li>
           ))}

@@ -2,7 +2,7 @@ let activity = [
   {
     actions: "",
     traits: {
-      nice: ["helpuf", "friendly", "compassionate", "thougtful"],
+      nice: ["helpful", "friendly", "compassionate", "thoughtful"],
       happy: ["cheerful", "pleased", "joyful", "satisfied"],
       smart: ["wise", "clever", "creative", "independent"],
       brave: ["fearless", "adventurous", "daring", "confident"],
