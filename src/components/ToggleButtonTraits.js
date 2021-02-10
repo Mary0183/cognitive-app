@@ -12,8 +12,6 @@ function ToggleButtonTraits(props) {
           <p>Nice</p>
           <ToggleButtonGroup
             onChange={(values) => {
-              console.log(values);
-
               props.handleNiceTraits(values);
             }}
             type="checkbox"
@@ -44,7 +42,7 @@ function ToggleButtonTraits(props) {
           <p>Happy</p>
           <ToggleButtonGroup
             onChange={(values) => {
-              props.onChange(values);
+              props.handleHappyTraits(values);
             }}
             type="checkbox"
             name="traits"
@@ -69,7 +67,7 @@ function ToggleButtonTraits(props) {
           <p>Brave</p>
           <ToggleButtonGroup
             onChange={(values) => {
-              console.log(values);
+              props.handleBraveTraits(values);
             }}
             type="checkbox"
             name="traits"
@@ -97,19 +95,19 @@ function ToggleButtonTraits(props) {
           <p>Smart</p>
           <ToggleButtonGroup
             onChange={(values) => {
-              console.log(values);
+              props.handleSmartTraits(values);
             }}
             type="checkbox"
             name="traits"
             vertical="false"
           >
-            <ToggleButton className="positive-traits smart" value={"Wise"}>
+            <ToggleButton className="positive-traits smart" value={"wise"}>
               Wise
             </ToggleButton>
-            <ToggleButton className="positive-traits smart" value={"Clever"}>
+            <ToggleButton className="positive-traits smart" value={"clever"}>
               Clever
             </ToggleButton>
-            <ToggleButton className="positive-traits smart" value={"Creative"}>
+            <ToggleButton className="positive-traits smart" value={"creative"}>
               Creative
             </ToggleButton>
             <ToggleButton

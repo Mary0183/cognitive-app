@@ -6,12 +6,28 @@ const Form = (props) => {
   const [text, setText] = useState(""); //state called text (activities)
   const [traits, setTraits] = useState([]);
   const [niceTraits, setNiceTraits] = useState([]);
+  const [happyTraits, setHappyTraits] = useState([]);
+  const [braveTraits, setBraveTraits] = useState([]);
+  const [smartTraits, setSmartTraits] = useState([]);
+
+  function handleSmartTraits(values) {
+    setSmartTraits(values);
+    console.log(values);
+  }
+  function handleBraveTraits(values) {
+    setBraveTraits(values);
+    console.log(values);
+  }
 
   function handleNiceTraits(values) {
     setNiceTraits(values);
     console.log(values);
   }
 
+  function handleHappyTraits(values) {
+    setHappyTraits(values);
+    console.log(values);
+  }
   function handleChange(values) {
     setTraits(values);
     console.log(values);
@@ -51,6 +67,9 @@ const Form = (props) => {
       <ToggleButtonTraits
         onChange={(values) => handleChange(values)}
         handleNiceTraits={handleNiceTraits}
+        handleHappyTraits={handleHappyTraits}
+        handleBraveTraits={handleBraveTraits}
+        handleSmartTraits={handleSmartTraits}
       />
     </>
   );
