@@ -18,27 +18,27 @@ const Form = (props) => {
   function handleChange(values, event) {
     let groupName = event.target.name;
     setTraits((data) => {
-      return { ...data, [groupName]: values };
+      return { ...data, [groupName]: values }; //adds a key to traits object with the selected values
     });
   }
 
+  // handleSubmit is handling the data submitted after writting an action and selecting traits when the button is clicked
   const handleSubmit = (event) => {
     event.preventDefault();
+    //onSubmit props comes from the parent component and does reference to addAction function
+    //action key and traits key can be called any name but they must reference the setter state
     props.onSubmit({
       action: activity,
       traits: traits,
     });
     setActivity("");
+    setTraits(emptyTraitArray);
   };
 
   const handleInputChange = (event) => {
     let { name, value } = event.target; //name of the field and value of the field
-
-    switch (name) {
-      case "actionInput":
-        setActivity(value);
-      default:
-        break;
+    if (name === "actionInput") {
+      setActivity(value); //value is the activity passed in the input field
     }
   };
   return (
@@ -47,9 +47,9 @@ const Form = (props) => {
         <form onSubmit={handleSubmit}>
           <label htmlFor="action">
             <input
-              name="actionInput" // name should match the name case if not in won't update the state correctly
+              name="actionInput"
               type="text"
-              value={activity} //the value must match the state
+              value={activity}
               onChange={handleInputChange}
             ></input>
           </label>
@@ -60,11 +60,7 @@ const Form = (props) => {
       <ToggleButtonTraits
         onChange={handleChange}
         onSubmit={handleSubmit}
-
-        //   handleNiceTraits={handleNiceTraits}
-        //   handleHappyTraits={handleHappyTraits}
-        //   handleBraveTraits={handleBraveTraits}
-        //   handleSmartTraits={handleSmartTraits}
+        traits={traits}
       />
     </>
   );

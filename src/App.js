@@ -8,11 +8,11 @@ import "./App.css";
 let initialActions = [];
 
 function App() {
-  const [actions, setActions] = useState(initialActions); //action
+  const [actions, setActions] = useState(initialActions); //keeps every action passed on the input fiel updated
 
   function addAction(action) {
     //I have to change the entire array in order for react to notice that something changed and to redraw if necessary
-    setActions((actions) => [...actions, action]); //here the entire array is replaced
+    setActions((actions) => [...actions, action]); // using spread operator to create a copy and append an action
   }
 
   function removeAction(indexToFilter) {

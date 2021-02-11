@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
+import React from "react";
 import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import "./ToggleButtonTraits.css";
@@ -16,6 +15,7 @@ function ToggleButtonTraits(props) {
               name="nice"
               vertical="false"
               onChange={props.onChange}
+              value={props.traits.nice}
             >
               <ToggleButton className="positive-traits nice" value={"helpful"}>
                 Helpful
@@ -36,8 +36,6 @@ function ToggleButtonTraits(props) {
                 Thougtful
               </ToggleButton>
             </ToggleButtonGroup>
-
-            {/*<Button type="submit">Submit</Button>*/}
           </div>
 
           <div>
@@ -47,6 +45,7 @@ function ToggleButtonTraits(props) {
               name="happy"
               vertical="false"
               onChange={props.onChange}
+              value={props.traits.happy}
             >
               <ToggleButton
                 className="positive-traits happy"
@@ -76,7 +75,7 @@ function ToggleButtonTraits(props) {
               name="brave"
               vertical="false"
               onChange={props.onChange}
-              vertical="false"
+              value={props.traits.brave}
             >
               <ToggleButton
                 className="positive-traits brave"
@@ -109,7 +108,7 @@ function ToggleButtonTraits(props) {
               name="smart"
               vertical="false"
               onChange={props.onChange}
-              vertical="false"
+              value={props.traits.smart}
             >
               <ToggleButton className="positive-traits smart" value={"wise"}>
                 Wise
