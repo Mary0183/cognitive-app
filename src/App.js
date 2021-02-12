@@ -24,12 +24,13 @@ function App() {
     <div className="App">
       <h1>What made me feel good today...</h1>
 
+      {/* onSubmit is expecting text that is passing from addAction */}
+      <Form onSubmit={addAction} />
+
       <ActionsDone
         actions={actions}
         onRemove={(index) => removeAction(index)}
       />
-      {/* onSubmit is expecting text that is passing from addAction */}
-      <Form onSubmit={addAction} />
     </div>
   );
 }

@@ -6,3 +6,11 @@ li::marker {
   content: "▸";
   color: #d2228c;
 }
+
+.remove-button {
+  margin-left: 10px;
+}
+
+.edit-button {
+  margin-left: 10px;
+}

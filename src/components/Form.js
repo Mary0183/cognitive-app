@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
+
 import "./Form.css";
 
 const emptyTraitArray = {
@@ -53,7 +54,7 @@ const Form = (props) => {
               onChange={handleInputChange}
             ></input>
           </label>
-          <button type="submit">Submit</button>
+          <button type="submit">Add</button>
         </form>
       </div>
 
