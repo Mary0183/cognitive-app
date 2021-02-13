@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
-
-import "./Form.css";
 
 const emptyTraitArray = {
   nice: [],
@@ -10,7 +8,7 @@ const emptyTraitArray = {
   smart: [],
 };
 
-const Form = (props) => {
+function EditForm(props) {
   // Set initial data to optional 'data' props, if passed, else empty
   let initialData = props.data || emptyTraitArray;
 
@@ -43,10 +41,9 @@ const Form = (props) => {
       setActivity(value); //value is the activity passed in the input field
     }
   };
-
   return (
     <>
-      <div className="Form">
+      <div className="EditForm">
         <form onSubmit={handleSubmit}>
           <label htmlFor="action">
             <input
@@ -56,17 +53,24 @@ const Form = (props) => {
               onChange={handleInputChange}
             ></input>
           </label>
-          <button type="submit">Add</button>
+          <button
+            onClick={() => {
+              props.editRow(activity);
+            }}
+            type="submit"
+          >
+            Edit
+          </button>
         </form>
       </div>
 
-      <ToggleButtonTraits
+      {/* <ToggleButtonTraits
         onChange={handleChange}
         onSubmit={handleSubmit}
         traits={traits}
-      />
+      /> */}
     </>
   );
-};
+}
 
-export default Form;
+export default EditForm;

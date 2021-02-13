@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
@@ -20,7 +20,13 @@ function ActionsDone(props) {
                 icon={faTimesCircle}
                 onClick={() => props.onRemove(index)}
               />
-              <FontAwesomeIcon className="edit-button" icon={faPencilAlt} />
+              <FontAwesomeIcon
+                className="edit-button"
+                icon={faPencilAlt}
+                onClick={() => {
+                  props.editRow(action, action.traits);
+                }}
+              />
               {
                 <>
                   <ul>
