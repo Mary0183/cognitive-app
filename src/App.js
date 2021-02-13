@@ -41,7 +41,7 @@ function App() {
       <h1>What made me feel good today...</h1>
 
       {/* onSubmit is expecting text that is passing from addAction */}
-      <Form onSubmit={addAction} />
+      <Form onSubmit={addAction} currentUpdate={currentUpdate} />
 
       <ActionsDone
         actions={actions}

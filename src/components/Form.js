@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
 
 import "./Form.css";
@@ -14,8 +14,18 @@ const Form = (props) => {
   // Set initial data to optional 'data' props, if passed, else empty
   let initialData = props.data || emptyTraitArray;
 
+  let showCurrentUpdt = props.currentUpdate.action;
+  let showCurrentTraitUpdt = props.currentUpdate.traits;
+
   const [activity, setActivity] = useState("");
   const [traits, setTraits] = useState(initialData);
+  console.log(traits);
+
+  //
+  useEffect(() => {
+    setActivity(showCurrentUpdt);
+    setTraits(showCurrentTraitUpdt || emptyTraitArray); //if traits are being selected shoe them or don't
+  }, [props]);
 
   function handleChange(values, event) {
     let groupName = event.target.name;
@@ -28,7 +38,6 @@ const Form = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     //onSubmit props comes from the parent component and does reference to addAction function
-    //action key and traits key can be called any name but they must reference the setter state
     props.onSubmit({
       action: activity,
       traits: traits,
