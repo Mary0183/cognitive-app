@@ -39,9 +39,15 @@ function App() {
   return (
     <div className="App">
       <h1>What made me feel good today...</h1>
-
-      {/* onSubmit is expecting text that is passing from addAction */}
-      <Form onSubmit={addAction} currentUpdate={currentUpdate} />
+      <div>
+        {/* onSubmit is expecting text that is passing from addAction */}
+        <Form
+          onSubmit={addAction}
+          currentUpdate={currentUpdate}
+          updating={updating}
+          actions={actions}
+        />
+      </div>
 
       <ActionsDone
         actions={actions}

@@ -14,17 +14,17 @@ const Form = (props) => {
   // Set initial data to optional 'data' props, if passed, else empty
   let initialData = props.data || emptyTraitArray;
 
-  let showCurrentUpdt = props.currentUpdate.action;
-  let showCurrentTraitUpdt = props.currentUpdate.traits;
+  let showCurrentUpdt = props.currentUpdate.action; //edit mode
+  let showCurrentTraitUpdt = props.currentUpdate.traits; //edit mode
 
   const [activity, setActivity] = useState("");
   const [traits, setTraits] = useState(initialData);
   console.log(traits);
 
-  //
+  //edit mode
   useEffect(() => {
     setActivity(showCurrentUpdt);
-    setTraits(showCurrentTraitUpdt || emptyTraitArray); //if traits are being selected shoe them or don't
+    setTraits(showCurrentTraitUpdt || emptyTraitArray); //if traits are being selected show them or don't
   }, [props]);
 
   function handleChange(values, event) {
@@ -37,6 +37,7 @@ const Form = (props) => {
   // handleSubmit is handling the data submitted after writting an action and selecting traits when the button is clicked
   const handleSubmit = (event) => {
     event.preventDefault();
+
     //onSubmit props comes from the parent component and does reference to addAction function
     props.onSubmit({
       action: activity,
@@ -65,7 +66,10 @@ const Form = (props) => {
               onChange={handleInputChange}
             ></input>
           </label>
-          <button type="submit">Add</button>
+          {/* if updating is not true show Update button*/}
+          {!props.updating && <button type="submit">Add</button>}
+          {/* if updating is true show Update button*/}
+          {props.updating && <button>Update</button>}
         </form>
       </div>
 
