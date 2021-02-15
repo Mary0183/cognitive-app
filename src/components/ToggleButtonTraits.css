@@ -1,10 +1,13 @@
 .btn-group-vertical .positive-traits {
-  background-color: transparent;
+  background-color: #282c34;
 }
 .btn-group-vertical .positive-traits.focus {
-  background-color: transparent;
+  background-color: #282c34;
 }
 
+.btn-group-vertical {
+  width: 135px;
+}
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -12,6 +15,7 @@
   width: 600px;
   margin-left: 40px;
   margin: 0 auto;
+  margin-top: 30px;
   justify-items: center;
 }
 

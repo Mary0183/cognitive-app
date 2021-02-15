@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
+  background-color: #282c34;
 }
 
 .App {
@@ -17,4 +18,21 @@ h1 {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 60px;
+}
+
+img {
+  width: 700px;
+}
+
+.grid-img-art {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f8f8f5;
+  height: 550px;
+  align-items: center;
+}
+
+.grid-img-art .left-side {
+  position: relative;
+  right: 90px;
 }

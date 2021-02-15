@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ActionsDone from "./components/ActionsDone";
 import Form from "./components/Form";
+import Peacefulness from "./images/Peacefulness.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -48,23 +49,29 @@ function App() {
   return (
     <div className="App">
       <h1>What made me feel good today...</h1>
-      <div>
-        {/* onSubmit is expecting text that is passing from addAction */}
-        <Form
-          onSubmit={addAction}
-          currentUpdate={currentUpdate}
-          updating={updating}
-          actions={actions}
-          updateActivity={updateActivity}
-        />
-      </div>
+      <div className="grid-img-art">
+        <div>
+          <img src={Peacefulness} alt="peacefulness art" />
+        </div>
 
-      <ActionsDone
-        actions={actions}
-        onRemove={(index) => removeAction(index)}
-        editRow={editRow}
-        currentUpdate={currentUpdate}
-      />
+        <div className="left-side">
+          {/* onSubmit is expecting text that is passing from addAction */}
+          <Form
+            onSubmit={addAction}
+            currentUpdate={currentUpdate}
+            updating={updating}
+            actions={actions}
+            updateActivity={updateActivity}
+          />
+
+          <ActionsDone
+            actions={actions}
+            onRemove={(index) => removeAction(index)}
+            editRow={editRow}
+            currentUpdate={currentUpdate}
+          />
+        </div>
+      </div>
     </div>
   );
 }
