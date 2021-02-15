@@ -36,6 +36,15 @@ function App() {
     });
   };
 
+  const updateActivity = (id, updatedActivity) => {
+    setUpdating(false);
+
+    setActions(
+      actions.map((action) => (action.id === id ? updatedActivity : action))
+    );
+    setCurrentUpdate(initialFormState);
+  };
+
   return (
     <div className="App">
       <h1>What made me feel good today...</h1>
@@ -46,6 +55,7 @@ function App() {
           currentUpdate={currentUpdate}
           updating={updating}
           actions={actions}
+          updateActivity={updateActivity}
         />
       </div>
 

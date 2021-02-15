@@ -1,8 +1,4 @@
-.Form {
-  width: 600px;
+Form {
+  width: 260px;
   margin: 0 auto;
-}
-
-.Form input {
-  margin: 0 10px;
 }

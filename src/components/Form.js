@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
+import { Alert } from "react-bootstrap/Alert";
+import { Button } from "react-bootstrap/Button";
 
 import "./Form.css";
 
@@ -18,8 +20,10 @@ const Form = (props) => {
   let showCurrentTraitUpdt = props.currentUpdate.traits; //edit mode
 
   const [activity, setActivity] = useState("");
+
   const [traits, setTraits] = useState(initialData);
-  console.log(traits);
+
+  const [show, setShow] = useState("");
 
   //edit mode
   useEffect(() => {
@@ -38,13 +42,18 @@ const Form = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    //onSubmit props comes from the parent component and does reference to addAction function
-    props.onSubmit({
-      action: activity,
-      traits: traits,
-    });
-    setActivity("");
-    setTraits(emptyTraitArray);
+    if (traits == emptyTraitArray) {
+      alert("Choose some traits and try again.");
+      // setShow("Please fill action and traits");
+    } else {
+      //onSubmit props comes from the parent component and does reference to addAction function
+      props.onSubmit({
+        action: activity,
+        traits: traits,
+      });
+      setActivity("");
+      setTraits(emptyTraitArray);
+    }
   };
 
   const handleInputChange = (event) => {
@@ -64,12 +73,26 @@ const Form = (props) => {
               type="text"
               value={activity}
               onChange={handleInputChange}
+              required
             ></input>
           </label>
           {/* if updating is not true show Update button*/}
           {!props.updating && <button type="submit">Add</button>}
           {/* if updating is true show Update button*/}
-          {props.updating && <button>Update</button>}
+          {props.updating && (
+            <button
+              onClick={() => {
+                props.updateActivity(props.currentUpdate.id, {
+                  action: activity,
+                  traits: traits,
+                });
+                setActivity("");
+                setTraits(emptyTraitArray);
+              }}
+            >
+              Update
+            </button>
+          )}
         </form>
       </div>
 
