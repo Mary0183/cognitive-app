@@ -12,6 +12,7 @@ body {
 .ActionsDone {
   width: 600px;
   margin: 0 auto;
+  padding-left: 110px;
 }
 
 h1 {
@@ -22,11 +23,13 @@ h1 {
 
 img {
   width: 840px;
+  height: 600px;
 }
 
 .grid-img-art {
   display: grid;
   background-color: #f8f8f5;
+  height: 600px;
 }
 
 .layer-1,

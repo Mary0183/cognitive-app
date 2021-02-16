@@ -11,8 +11,10 @@ li::marker {
 
 .remove-button {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .edit-button {
   margin-left: 10px;
+  cursor: pointer;
 }

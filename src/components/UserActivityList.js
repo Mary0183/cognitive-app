@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "./UserActivityList.css";
 
-function ActionsDone(props) {
+function UserActivityList(props) {
+  function toggle() {
+    if (props.createUpdate === false) {
+      return true;
+    }
+    return false;
+  }
+  let result = toggle();
   return (
     <>
       <div className="ActionsDone">
@@ -53,7 +59,14 @@ function ActionsDone(props) {
           ))}
         </ul>
       </div>
+      <button
+        onClick={(result) => {
+          props.onSubmit(result);
+        }}
+      >
+        Add new
+      </button>
     </>
   );
 }
-export default ActionsDone;
+export default UserActivityList;

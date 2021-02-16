@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Form from "./components/Form";
 import UserActivityList from "./components/UserActivityList";
 import CreateUpdateActivity from "./components/CreateUpdateActivity";
 import Peacefulness from "./images/Peacefulness.png";
@@ -15,12 +14,14 @@ function App() {
   const [actions, setActions] = useState(initialActions); //keeps every action passed on the input fiel updated
   const [currentUpdate, setCurrentUpdate] = useState(initialFormState);
   const [updating, setUpdating] = useState(false);
+  const [createUpdate, setCreateUpdate] = useState(true); //state that shows the "admin" side if it's true
 
   function addAction(action) {
     //adding an id to each action
     action.id = actions.length + 1;
     //I have to change the entire array in order for react to notice that something changed and to redraw if necessary
     setActions((actions) => [...actions, action]); // using spread operator to create a copy and append an action
+    setCreateUpdate(false); // this state set to false will show the UserActivity component when add button is clicked
   }
 
   function removeAction(indexToFilter) {
@@ -36,6 +37,7 @@ function App() {
       action: action.action,
       traits: action.traits,
     });
+    setCreateUpdate(true); // this state set to true will show CreateActivity component when the pencil button is clicked. For the user to be able to edit
   };
 
   const updateActivity = (id, updatedActivity) => {
@@ -45,11 +47,28 @@ function App() {
       actions.map((action) => (action.id === id ? updatedActivity : action))
     );
     setCurrentUpdate(initialFormState);
+    setCreateUpdate(false); // this state set to false will show the UserActivity component when update button is clicked
+  };
+
+  const handleChangeView = (createUpdate) => {
+    setCreateUpdate(createUpdate);
   };
 
   return (
     <div className="App">
       <h1>What made me feel good today...</h1>
+      <button
+        className={createUpdate ? "button-active" : "button"}
+        onClick={() => handleChangeView(true)}
+      >
+        Create
+      </button>
+      <button
+        className={!createUpdate ? "button-active" : "button"}
+        onClick={() => handleChangeView(false)}
+      >
+        USER
+      </button>
       <div className="grid-img-art">
         <div className="layer-1">
           <img src={Peacefulness} alt="peacefulness art" />
@@ -57,23 +76,26 @@ function App() {
 
         <div className="layer-2">
           {/* onSubmit is expecting text that is passing from addAction */}
-          <Form
-            onSubmit={addAction}
-            currentUpdate={currentUpdate}
-            updating={updating}
-            actions={actions}
-            updateActivity={updateActivity}
-          />
+          {createUpdate && (
+            <CreateUpdateActivity
+              onSubmit={addAction}
+              currentUpdate={currentUpdate}
+              updating={updating}
+              actions={actions}
+              updateActivity={updateActivity}
+            />
+          )}
 
-          <UserActivityList
-            actions={actions}
-            onRemove={(index) => removeAction(index)}
-            editRow={editRow}
-            currentUpdate={currentUpdate}
-          />
+          {!createUpdate && (
+            <UserActivityList
+              actions={actions}
+              onRemove={(index) => removeAction(index)}
+              editRow={editRow}
+              currentUpdate={currentUpdate}
+              onSubmit={(i) => handleChangeView(i)}
+            />
+          )}
         </div>
-
-        <CreateUpdateActivity />
       </div>
     </div>
   );
