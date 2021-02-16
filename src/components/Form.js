@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
-import { Alert } from "react-bootstrap/Alert";
-import { Button } from "react-bootstrap/Button";
 
 import "./Form.css";
 

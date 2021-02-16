@@ -21,18 +21,21 @@ h1 {
 }
 
 img {
-  width: 700px;
+  width: 840px;
 }
 
 .grid-img-art {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   background-color: #f8f8f5;
-  height: 550px;
-  align-items: center;
 }
 
-.grid-img-art .left-side {
-  position: relative;
-  right: 90px;
+.layer-1,
+.layer-2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.layer-2 {
+  place-self: center;
+  margin-left: 500px;
 }

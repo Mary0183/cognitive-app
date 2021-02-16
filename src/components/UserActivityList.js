@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
-// import { Accordion, Card, Button } from "react-bootstrap";
-
-import "./ActionsDone.css";
+import "./UserActivityList.css";
 
 function ActionsDone(props) {
   return (

@@ -21,6 +21,8 @@
 
 p {
   text-align: center;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active.nice {
@@ -33,4 +35,8 @@ p {
 
 .btn-primary:not(:disabled):not(.disabled).active.brave {
   background-color: rgb(232, 236, 0);
+}
+
+p {
+  color: #282c34;
 }

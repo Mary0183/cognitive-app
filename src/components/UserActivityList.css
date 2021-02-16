@@ -1,6 +1,7 @@
 ul {
   list-style-type: none;
-  color: #282c34;
+  color: black;
+  font-size: 20px;
 }
 
 li::marker {
