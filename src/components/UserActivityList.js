@@ -19,37 +19,40 @@ function UserActivityList(props) {
       <div className="ActionsDone">
         <ul>
           {props.actions.map((action, index) => (
-            <li key={index}>
-              <Accordion
-                title={action.action}
-                children={action.traits}
-              ></Accordion>
+            <li key={index} className="grid-accordion-edit-remove">
+              <div>
+                <Accordion
+                  title={action.action}
+                  children={action.traits}
+                ></Accordion>
+              </div>
 
-              <FontAwesomeIcon
-                className="remove-button"
-                icon={faTimesCircle}
-                onClick={() => props.onRemove(index)}
-              />
-              <FontAwesomeIcon
-                className="edit-button"
-                icon={faPencilAlt}
-                onClick={() => {
-                  props.editRow(action, action.traits);
-                }}
-              />
+              <div>
+                <FontAwesomeIcon
+                  className="remove-button"
+                  icon={faTimesCircle}
+                  onClick={() => props.onRemove(index)}
+                />
+                <FontAwesomeIcon
+                  className="edit-button"
+                  icon={faPencilAlt}
+                  onClick={() => {
+                    props.editRow(action, action.traits);
+                  }}
+                />
+              </div>
             </li>
           ))}
         </ul>
+        <button
+          className="add-new-activity"
+          onClick={(result) => {
+            props.onSubmit(result);
+          }}
+        >
+          Add new activity
+        </button>
       </div>
-      <div className="wrapper"></div>
-
-      <button
-        onClick={(result) => {
-          props.onSubmit(result);
-        }}
-      >
-        Add new
-      </button>
     </>
   );
 }

@@ -1,7 +1,19 @@
+.ActionsDone {
+  width: 600px;
+  margin: 0 auto;
+  padding-left: 110px;
+}
+
 ul {
   list-style-type: none;
   color: black;
   font-size: 20px;
+}
+
+.grid-accordion-edit-remove {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 
 li::marker {
@@ -17,4 +29,5 @@ li::marker {
 .edit-button {
   margin-left: 10px;
   cursor: pointer;
+  justify-self: start;
 }

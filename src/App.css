@@ -9,16 +9,12 @@ body {
   color: white;
 }
 
-.ActionsDone {
-  width: 600px;
-  margin: 0 auto;
-  padding-left: 110px;
-}
-
 h1 {
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 60px;
+}
+h2 {
+  color: #282c34;
 }
 
 img {
@@ -41,4 +37,13 @@ img {
 .layer-2 {
   place-self: center;
   margin-left: 500px;
+}
+
+.button {
+  font-size: 35px;
+}
+
+.arrow-right {
+  color: #282c34;
+  float: right;
 }

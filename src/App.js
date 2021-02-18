@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import UserActivityList from "./components/UserActivityList";
 import CreateUpdateActivity from "./components/CreateUpdateActivity";
 import Peacefulness from "./images/Peacefulness.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
@@ -57,18 +58,7 @@ function App() {
   return (
     <div className="App">
       <h1>What made me feel good today...</h1>
-      <button
-        className={createUpdate ? "button-active" : "button"}
-        onClick={() => handleChangeView(true)}
-      >
-        Create
-      </button>
-      <button
-        className={!createUpdate ? "button-active" : "button"}
-        onClick={() => handleChangeView(false)}
-      >
-        USER
-      </button>
+
       <div className="grid-img-art">
         <div className="layer-1">
           <img src={Peacefulness} alt="peacefulness art" />
@@ -96,6 +86,14 @@ function App() {
                 onSubmit={(i) => handleChangeView(i)}
               />
             )}
+            <div className="arrow-right">
+              <h2>See List</h2>
+              <FontAwesomeIcon
+                className={!createUpdate ? "arrow-button" : "button"}
+                icon={faAngleRight}
+                onClick={() => handleChangeView(false)}
+              />
+            </div>
           </div>
         </div>
       </div>

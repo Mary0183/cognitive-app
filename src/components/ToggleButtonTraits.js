@@ -15,6 +15,7 @@ function ToggleButtonTraits(props) {
               name="nice"
               vertical="false"
               onChange={props.onChange}
+              onSubmit={props.onSubmit}
               value={props.traits.nice}
             >
               <ToggleButton className="positive-traits nice" value={"helpful"}>
@@ -45,6 +46,7 @@ function ToggleButtonTraits(props) {
               name="happy"
               vertical="false"
               onChange={props.onChange}
+              onSubmit={props.onSubmit}
               value={props.traits.happy}
             >
               <ToggleButton
@@ -75,6 +77,7 @@ function ToggleButtonTraits(props) {
               name="brave"
               vertical="false"
               onChange={props.onChange}
+              onSubmit={props.onSubmit}
               value={props.traits.brave}
             >
               <ToggleButton
@@ -108,6 +111,7 @@ function ToggleButtonTraits(props) {
               name="smart"
               vertical="false"
               onChange={props.onChange}
+              onSubmit={props.onSubmit}
               value={props.traits.smart}
             >
               <ToggleButton className="positive-traits smart" value={"wise"}>
