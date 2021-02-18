@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import Accordion from "./Accordion";
 
 import "./UserActivityList.css";
 
@@ -12,13 +13,18 @@ function UserActivityList(props) {
     return false;
   }
   let result = toggle();
+
   return (
     <>
       <div className="ActionsDone">
         <ul>
           {props.actions.map((action, index) => (
             <li key={index}>
-              {action.action}
+              <Accordion
+                title={action.action}
+                children={action.traits}
+              ></Accordion>
+
               <FontAwesomeIcon
                 className="remove-button"
                 icon={faTimesCircle}
@@ -31,34 +37,12 @@ function UserActivityList(props) {
                   props.editRow(action, action.traits);
                 }}
               />
-              {
-                <>
-                  <ul>
-                    {action.traits.nice.map((trait) => (
-                      <li>{trait}</li>
-                    ))}
-                  </ul>
-                  <ul>
-                    {action.traits.happy.map((trait) => (
-                      <li>{trait}</li>
-                    ))}
-                  </ul>
-                  <ul>
-                    {action.traits.brave.map((trait) => (
-                      <li>{trait}</li>
-                    ))}
-                  </ul>
-                  <ul>
-                    {action.traits.smart.map((trait) => (
-                      <li>{trait}</li>
-                    ))}
-                  </ul>
-                </>
-              }
             </li>
           ))}
         </ul>
       </div>
+      <div className="wrapper"></div>
+
       <button
         onClick={(result) => {
           props.onSubmit(result);

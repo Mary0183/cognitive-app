@@ -86,15 +86,17 @@ function App() {
             />
           )}
 
-          {!createUpdate && (
-            <UserActivityList
-              actions={actions}
-              onRemove={(index) => removeAction(index)}
-              editRow={editRow}
-              currentUpdate={currentUpdate}
-              onSubmit={(i) => handleChangeView(i)}
-            />
-          )}
+          <div>
+            {!createUpdate && (
+              <UserActivityList
+                actions={actions}
+                onRemove={(index) => removeAction(index)}
+                editRow={editRow}
+                currentUpdate={currentUpdate}
+                onSubmit={(i) => handleChangeView(i)}
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
