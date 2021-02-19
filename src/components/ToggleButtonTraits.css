@@ -13,16 +13,15 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 230px;
   width: 600px;
-  margin-left: 40px;
-  margin: 0 auto;
   margin-top: 30px;
   justify-items: center;
 }
 
-p {
+.proj-grid p {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
+  color: #f1e8f1;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active.nice {

@@ -28,7 +28,7 @@ body {
 .accordion-title {
   font-weight: 600;
   cursor: pointer;
-  color: #666;
+  color: #415164;
   padding: 0.5em 1.5em;
   border: solid 1px #ccc;
   border-radius: 1.5em;
@@ -46,7 +46,7 @@ body {
 }
 .accordion-title:hover,
 .accordion-title.open {
-  color: black;
+  color: #3a495a;
 }
 .accordion-title.open::after {
   content: "";

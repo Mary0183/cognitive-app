@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import UserActivityList from "./components/UserActivityList";
 import CreateUpdateActivity from "./components/CreateUpdateActivity";
-import Peacefulness from "./images/Peacefulness.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -57,37 +56,31 @@ function App() {
 
   return (
     <div className="App">
-      <h1>What made me feel good today...</h1>
-
       <div className="grid-img-art">
-        <div className="layer-1">
-          <img src={Peacefulness} alt="peacefulness art" />
-        </div>
+        {/* onSubmit is expecting text that is passing from addAction */}
+        {createUpdate && (
+          <CreateUpdateActivity
+            onSubmit={addAction}
+            currentUpdate={currentUpdate}
+            updating={updating}
+            actions={actions}
+            updateActivity={updateActivity}
+          />
+        )}
 
-        <div className="layer-2">
-          {/* onSubmit is expecting text that is passing from addAction */}
-          {createUpdate && (
-            <CreateUpdateActivity
-              onSubmit={addAction}
-              currentUpdate={currentUpdate}
-              updating={updating}
+        <div>
+          {!createUpdate && (
+            <UserActivityList
               actions={actions}
-              updateActivity={updateActivity}
+              onRemove={(index) => removeAction(index)}
+              editRow={editRow}
+              currentUpdate={currentUpdate}
+              onSubmit={(i) => handleChangeView(i)}
             />
           )}
-
-          <div>
-            {!createUpdate && (
-              <UserActivityList
-                actions={actions}
-                onRemove={(index) => removeAction(index)}
-                editRow={editRow}
-                currentUpdate={currentUpdate}
-                onSubmit={(i) => handleChangeView(i)}
-              />
-            )}
-            <div className="arrow-right">
-              <h2>See List</h2>
+          <div className="grid-right-arrow-button">
+            <h3>See List</h3>
+            <div className="see-list-arrow">
               <FontAwesomeIcon
                 className={!createUpdate ? "arrow-button" : "button"}
                 icon={faAngleRight}

@@ -1,12 +1,10 @@
 .ActionsDone {
-  width: 600px;
-  margin: 0 auto;
   padding-left: 110px;
 }
 
 ul {
   list-style-type: none;
-  color: black;
+  color: #415164;
   font-size: 20px;
 }
 

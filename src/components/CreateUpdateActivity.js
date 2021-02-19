@@ -62,6 +62,7 @@ const CreateUpdateActivity = (props) => {
   return (
     <>
       <div className="Form">
+        <h1>What made me feel good today...</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="action">
             <input
