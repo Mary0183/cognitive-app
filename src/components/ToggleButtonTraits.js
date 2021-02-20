@@ -6,135 +6,158 @@ import "./ToggleButtonTraits.css";
 function ToggleButtonTraits(props) {
   return (
     <>
-      <div>
-        <form className="proj-grid">
-          <div>
-            <p>Nice</p>
-            <ToggleButtonGroup
-              type="checkbox"
-              name="nice"
-              vertical="false"
-              onChange={props.onChange}
-              onSubmit={props.onSubmit}
-              value={props.traits.nice}
-            >
-              <ToggleButton className="positive-traits nice" value={"Helpful"}>
-                Helpful
-              </ToggleButton>
-              <ToggleButton className="positive-traits nice" value={"Friendly"}>
-                Friendly
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits nice"
-                value={"Compassionate"}
+      <div className="proj-grid-grid">
+        <div className="wording-traits">
+          <h2>Now choose one or more positive traits that match that action</h2>
+        </div>
+        <div className="proj-grid-wrapper">
+          <form className="proj-grid">
+            <div>
+              <p>Nice</p>
+              <ToggleButtonGroup
+                type="checkbox"
+                name="nice"
+                vertical="false"
+                onChange={props.onChange}
+                onSubmit={props.onSubmit}
+                value={props.traits.nice}
               >
-                Compassionate
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits nice"
-                value={"Thougtful"}
-              >
-                Thougtful
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
+                <ToggleButton
+                  className="positive-traits nice"
+                  value={"Helpful"}
+                >
+                  Helpful
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits nice"
+                  value={"Friendly"}
+                >
+                  Friendly
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits nice"
+                  value={"Compassionate"}
+                >
+                  Compassionate
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits nice"
+                  value={"Thougtful"}
+                >
+                  Thougtful
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
 
-          <div>
-            <p>Happy</p>
-            <ToggleButtonGroup
-              type="checkbox"
-              name="happy"
-              vertical="false"
-              onChange={props.onChange}
-              onSubmit={props.onSubmit}
-              value={props.traits.happy}
-            >
-              <ToggleButton
-                className="positive-traits happy"
-                value={"Cheerful"}
+            <div>
+              <p>Happy</p>
+              <ToggleButtonGroup
+                type="checkbox"
+                name="happy"
+                vertical="false"
+                onChange={props.onChange}
+                onSubmit={props.onSubmit}
+                value={props.traits.happy}
               >
-                Cheerful
-              </ToggleButton>
-              <ToggleButton className="positive-traits happy" value={"Pleased"}>
-                Pleased
-              </ToggleButton>
-              <ToggleButton className="positive-traits happy" value={"Joyful"}>
-                Joyful
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits happy"
-                value={"Satisfied"}
-              >
-                Satisfied
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
+                <ToggleButton
+                  className="positive-traits happy"
+                  value={"Cheerful"}
+                >
+                  Cheerful
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits happy"
+                  value={"Pleased"}
+                >
+                  Pleased
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits happy"
+                  value={"Joyful"}
+                >
+                  Joyful
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits happy"
+                  value={"Satisfied"}
+                >
+                  Satisfied
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
 
-          <div>
-            <p>Brave</p>
-            <ToggleButtonGroup
-              type="checkbox"
-              name="brave"
-              vertical="false"
-              onChange={props.onChange}
-              onSubmit={props.onSubmit}
-              value={props.traits.brave}
-            >
-              <ToggleButton
-                className="positive-traits brave"
-                value={"Fearless"}
+            <div>
+              <p>Brave</p>
+              <ToggleButtonGroup
+                type="checkbox"
+                name="brave"
+                vertical="false"
+                onChange={props.onChange}
+                onSubmit={props.onSubmit}
+                value={props.traits.brave}
               >
-                Fearless
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits brave-traits brave"
-                value={"Adventurous"}
-              >
-                Adventurous
-              </ToggleButton>
-              <ToggleButton className="positive-traits brave" value={"Daring"}>
-                Daring
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits brave"
-                value={"Confident"}
-              >
-                Confident
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
+                <ToggleButton
+                  className="positive-traits brave"
+                  value={"Fearless"}
+                >
+                  Fearless
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits brave-traits brave"
+                  value={"Adventurous"}
+                >
+                  Adventurous
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits brave"
+                  value={"Daring"}
+                >
+                  Daring
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits brave"
+                  value={"Confident"}
+                >
+                  Confident
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
 
-          <div>
-            <p>Smart</p>
-            <ToggleButtonGroup
-              type="checkbox"
-              name="smart"
-              vertical="false"
-              onChange={props.onChange}
-              onSubmit={props.onSubmit}
-              value={props.traits.smart}
-            >
-              <ToggleButton className="positive-traits smart" value={"Wise"}>
-                Wise
-              </ToggleButton>
-              <ToggleButton className="positive-traits smart" value={"Clever"}>
-                Clever
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits smart"
-                value={"Creative"}
+            <div>
+              <p>Smart</p>
+              <ToggleButtonGroup
+                type="checkbox"
+                name="smart"
+                vertical="false"
+                onChange={props.onChange}
+                onSubmit={props.onSubmit}
+                value={props.traits.smart}
               >
-                Creative
-              </ToggleButton>
-              <ToggleButton
-                className="positive-traits smart"
-                value={"Independent"}
-              >
-                Independent
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-        </form>
+                <ToggleButton className="positive-traits smart" value={"Wise"}>
+                  Wise
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits smart"
+                  value={"Clever"}
+                >
+                  Clever
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits smart"
+                  value={"Creative"}
+                >
+                  Creative
+                </ToggleButton>
+                <ToggleButton
+                  className="positive-traits smart"
+                  value={"Independent"}
+                >
+                  Independent
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );

@@ -8,6 +8,16 @@
 .btn-group-vertical {
   width: 135px;
 }
+
+.proj-grid-grid {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  width: 630px;
+}
+
+.wording-traits {
+  text-align: center;
+}
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

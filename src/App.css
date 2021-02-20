@@ -1,6 +1,7 @@
 body {
-  background-image: url("./images/BlueWebsite.png");
+  background-image: url("./images/BlueApp.png");
   background-repeat: no-repeat;
+  background-color: #9ed0c9;
 }
 
 h3 {

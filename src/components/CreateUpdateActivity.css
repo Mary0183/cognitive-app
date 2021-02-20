@@ -1,6 +1,7 @@
 h1 {
   margin-top: 70px;
   margin-bottom: 106px;
+  text-align: center;
 }
 
 .Form {
@@ -8,19 +9,30 @@ h1 {
   grid-template-columns: 1fr;
   justify-items: center;
   width: 620px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   gap: 25px;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 20px;
 }
 
 label input {
-  margin-right: 15px;
   box-shadow: 2px 11px 22px 0px rgba(0, 0, 0, 0.58);
   -webkit-box-shadow: 2px 11px 22px 0px rgba(0, 0, 0, 0.58);
   -moz-box-shadow: 2px 11px 22px 0px rgba(0, 0, 0, 0.58);
 }
 
+label {
+  margin-right: 15px;
+}
+
 input {
   width: 360px;
+}
+
+.proj-grid-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.buttons-grid {
+  justify-self: start;
 }

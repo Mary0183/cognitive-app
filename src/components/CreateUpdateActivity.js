@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
+import Button from "react-bootstrap/Button";
 
 import "./CreateUpdateActivity.css";
 
@@ -62,34 +63,47 @@ const CreateUpdateActivity = (props) => {
   return (
     <>
       <div className="Form">
-        <h1>What made me feel good today...</h1>
+        <h1>
+          Write actions you did today that made you feel a positive way about
+          yourself...
+        </h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="action">
-            <input
-              name="actionInput"
-              type="text"
-              value={activity}
-              onChange={handleInputChange}
-              required
-            ></input>
-          </label>
-          {/* if updating is not true show Update button*/}
-          {!props.updating && <button type="submit">Add</button>}
-          {/* if updating is true show Update button*/}
-          {props.updating && (
-            <button
-              onClick={() => {
-                props.updateActivity(props.currentUpdate.id, {
-                  action: activity,
-                  traits: traits,
-                });
-                setActivity("");
-                setTraits(emptyTraitArray);
-              }}
-            >
-              Update
-            </button>
-          )}
+          <div className="proj-grid-form">
+            <div className="grid-input">
+              <label htmlFor="action">
+                <input
+                  class="form-control"
+                  name="actionInput"
+                  type="text"
+                  value={activity}
+                  onChange={handleInputChange}
+                  required
+                ></input>
+              </label>
+              {/* if updating is not true show Update button*/}
+              {!props.updating && (
+                <Button variant="light" type="submit">
+                  Add
+                </Button>
+              )}
+              {/* if updating is true show Update button*/}
+              {props.updating && (
+                <Button
+                  variant="light"
+                  onClick={() => {
+                    props.updateActivity(props.currentUpdate.id, {
+                      action: activity,
+                      traits: traits,
+                    });
+                    setActivity("");
+                    setTraits(emptyTraitArray);
+                  }}
+                >
+                  Update
+                </Button>
+              )}
+            </div>
+          </div>
         </form>
       </div>
 
