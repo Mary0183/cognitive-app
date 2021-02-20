@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Accordion from "./Accordion";
 
 import "./UserActivityList.css";
@@ -44,14 +45,18 @@ function UserActivityList(props) {
             </li>
           ))}
         </ul>
-        <button
-          className="add-new-activity"
-          onClick={(result) => {
-            props.onSubmit(result);
-          }}
-        >
-          Add new activity
-        </button>
+        <div className="grid-left-arrow-button">
+          <div className="go-back-arrow">
+            <FontAwesomeIcon
+              className="add-new-activity"
+              icon={faAngleLeft}
+              onClick={(result) => {
+                props.onSubmit(result);
+              }}
+            />
+          </div>
+          <h3>Go Back</h3>
+        </div>
       </div>
     </>
   );

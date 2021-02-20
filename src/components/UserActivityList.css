@@ -1,6 +1,18 @@
 .ActionsDone {
   padding-left: 110px;
 }
+.grid-left-arrow-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  gap: 5px;
+  width: 200px;
+  column-gap: 10px;
+}
+
+.go-back-arrow {
+  justify-self: end;
+}
 
 ul {
   list-style-type: none;
@@ -30,4 +42,9 @@ li::marker {
   margin-left: 10px;
   cursor: pointer;
   justify-self: start;
+}
+
+.add-new-activity {
+  color: #415164;
+  font-size: 35px;
 }
