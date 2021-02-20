@@ -17,9 +17,9 @@ To get started you’ll need to install the following packages into your project
 ## React Bootstrap
 
 To install react-bootstrap as a dependency, run the following command in your React project root directory.
-![alt text](src\images\Bootstrap.JPG)
+![alt text](src/images/Bootstrap.JPG)
 
-![alt text](src\images\Bootstrap1.JPG)
+![alt text](src/images/Bootstrap1.JPG)
 
 # WayToGo!
 
@@ -41,25 +41,25 @@ WayToGo! app aims to improve the way people perceive their every day to day life
 
 This is where you are going to type the activity that made you feel good about yourself
 
-![alt text](src\images\firstPart.JPG)
+![alt text](src/images/firstPart.JPG)
 
 2. **Positive Traits Checkbox list**
 
 This is where you select those traits or emotions that match that specific activity.
 
-![alt text](src\images\secondPart.JPG)
+![alt text](src/images/secondPart.JPG)
 
 3. **List of activities documented**
 
 Here you have a list of well-documented activities and inside each activity their matching positive traits or emotions. Each activity is documented in an accordion-type of the list. Next to each accordion, there is the remove button and an edit button showing as a pencil, each to remove or to edit the correspondent activity.
 
-![alt text](src\images\thirdPart.JPG)
+![alt text](src/images/thirdPart.JPG)
 
 4. **Update activities view**
 
 When clicking the edit button , you will be prompt to the Add Activity Page where the entire activity you chose to edit will show and the positive traits will lighten up. Here you can change the action and/or add or change positive traits. When done you can click the Update button and it will prompt you back to the list page again.
 
 And if you would like to add a new activity, click the Add New Activity arrow
-![alt text](src\images\ForthPart.JPG)
+![alt text](src/images/ForthPart.JPG)
 
 : ​*This is a student project that was created at[CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.*
