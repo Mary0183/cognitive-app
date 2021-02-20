@@ -1,3 +1,26 @@
+# Installations and dependencies
+
+## Yarn
+
+Run yarn to install packages and yarn start to run your development build.
+
+The app will run on http://localhost:3000 as the default port.
+
+## React FontAwesome
+
+Font Awesome now has an official React component that’s available for a friction-less way to use our icons in your React applications.
+
+To get started you’ll need to install the following packages into your project using a package manager, yarn. Here are examples that install everything you need and our solid style of icons using each respective package manager.
+
+![alt text](src\images\ReactFontawesome.JPG)
+
+## React Bootstrap
+
+To install react-bootstrap as a dependency, run the following command in your React project root directory.
+![alt text](src\images\Bootstrap.JPG)
+
+![alt text](src\images\Bootstrap1.JPG)
+
 # WayToGo!
 
 ## _Let's recall those positive moments of your day, shall we?_
@@ -39,4 +62,4 @@ When clicking the edit button , you will be prompt to the Add Activity Page wher
 And if you would like to add a new activity, click the Add New Activity arrow
 ![alt text](src\images\ForthPart.JPG)
 
-# What is the goal of WayToGo!
+: ​*This is a student project that was created at[CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.*
