@@ -18,21 +18,21 @@ function ToggleButtonTraits(props) {
               onSubmit={props.onSubmit}
               value={props.traits.nice}
             >
-              <ToggleButton className="positive-traits nice" value={"helpful"}>
+              <ToggleButton className="positive-traits nice" value={"Helpful"}>
                 Helpful
               </ToggleButton>
-              <ToggleButton className="positive-traits nice" value={"friendly"}>
+              <ToggleButton className="positive-traits nice" value={"Friendly"}>
                 Friendly
               </ToggleButton>
               <ToggleButton
                 className="positive-traits nice"
-                value={"compassionate"}
+                value={"Compassionate"}
               >
                 Compassionate
               </ToggleButton>
               <ToggleButton
                 className="positive-traits nice"
-                value={"thougtful"}
+                value={"Thougtful"}
               >
                 Thougtful
               </ToggleButton>
@@ -51,19 +51,19 @@ function ToggleButtonTraits(props) {
             >
               <ToggleButton
                 className="positive-traits happy"
-                value={"cheerful"}
+                value={"Cheerful"}
               >
                 Cheerful
               </ToggleButton>
-              <ToggleButton className="positive-traits happy" value={"pleased"}>
+              <ToggleButton className="positive-traits happy" value={"Pleased"}>
                 Pleased
               </ToggleButton>
-              <ToggleButton className="positive-traits happy" value={"joyful"}>
+              <ToggleButton className="positive-traits happy" value={"Joyful"}>
                 Joyful
               </ToggleButton>
               <ToggleButton
                 className="positive-traits happy"
-                value={"satisfied"}
+                value={"Satisfied"}
               >
                 Satisfied
               </ToggleButton>
@@ -82,22 +82,22 @@ function ToggleButtonTraits(props) {
             >
               <ToggleButton
                 className="positive-traits brave"
-                value={"fearless"}
+                value={"Fearless"}
               >
                 Fearless
               </ToggleButton>
               <ToggleButton
                 className="positive-traits brave-traits brave"
-                value={"adventurous"}
+                value={"Adventurous"}
               >
                 Adventurous
               </ToggleButton>
-              <ToggleButton className="positive-traits brave" value={"daring"}>
+              <ToggleButton className="positive-traits brave" value={"Daring"}>
                 Daring
               </ToggleButton>
               <ToggleButton
                 className="positive-traits brave"
-                value={"confident"}
+                value={"Confident"}
               >
                 Confident
               </ToggleButton>
@@ -114,21 +114,21 @@ function ToggleButtonTraits(props) {
               onSubmit={props.onSubmit}
               value={props.traits.smart}
             >
-              <ToggleButton className="positive-traits smart" value={"wise"}>
+              <ToggleButton className="positive-traits smart" value={"Wise"}>
                 Wise
               </ToggleButton>
-              <ToggleButton className="positive-traits smart" value={"clever"}>
+              <ToggleButton className="positive-traits smart" value={"Clever"}>
                 Clever
               </ToggleButton>
               <ToggleButton
                 className="positive-traits smart"
-                value={"creative"}
+                value={"Creative"}
               >
                 Creative
               </ToggleButton>
               <ToggleButton
                 className="positive-traits smart"
-                value={"independent"}
+                value={"Independent"}
               >
                 Independent
               </ToggleButton>

@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
 }
 
-.accordion-wrapper + * {
+.accordion-wrapper {
   margin-top: 0.5em;
 }
 
@@ -30,11 +30,12 @@ body {
   cursor: pointer;
   color: #415164;
   padding: 0.5em 1.5em;
-  border: solid 1px #ccc;
+  border: solid 1px #415164;
   border-radius: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: capitalize;
 }
 .accordion-title::after {
   content: "";

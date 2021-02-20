@@ -12,6 +12,15 @@ h3 {
   font-size: 35px;
 }
 
+.arrow-button {
+  display: none;
+  cursor: none;
+}
+
+.hide-see-list {
+  display: none;
+}
+
 .see-list-arrow {
   color: #415164;
   justify-self: start;
@@ -24,4 +33,5 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   justify-items: end;
   margin-top: 40px;
+  width: 960px;
 }

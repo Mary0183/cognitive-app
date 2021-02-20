@@ -52,6 +52,7 @@ function App() {
 
   const handleChangeView = (createUpdate) => {
     setCreateUpdate(createUpdate);
+    //after clicking on seelist and arrow icon in CreateUpdateActivity set both to null
   };
 
   return (
@@ -79,7 +80,9 @@ function App() {
             />
           )}
           <div className="grid-right-arrow-button">
-            <h3>See List</h3>
+            <h3 className={!createUpdate ? "hide-see-list" : "see-list"}>
+              See List
+            </h3>
             <div className="see-list-arrow">
               <FontAwesomeIcon
                 className={!createUpdate ? "arrow-button" : "button"}
