@@ -6,12 +6,13 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
   gap: 5px;
-  width: 200px;
+  width: 400px;
   column-gap: 10px;
 }
 
 .go-back-arrow {
   justify-self: end;
+  cursor: pointer;
 }
 
 ul {

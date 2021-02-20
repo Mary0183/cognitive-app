@@ -27,6 +27,7 @@ label {
 
 input {
   width: 360px;
+  cursor: pointer;
 }
 
 .proj-grid-form {

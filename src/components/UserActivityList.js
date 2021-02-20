@@ -55,7 +55,7 @@ function UserActivityList(props) {
               }}
             />
           </div>
-          <h3>Go Back</h3>
+          <h3>Add New Activity</h3>
         </div>
       </div>
     </>
