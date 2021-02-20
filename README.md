@@ -12,7 +12,7 @@ Font Awesome now has an official React component that’s available for a fricti
 
 To get started you’ll need to install the following packages into your project using a package manager, yarn. Here are examples that install everything you need and our solid style of icons using each respective package manager.
 
-![alt text](src\images\ReactFontawesome.JPG)
+![alt text](src/images/ReactFontawesome.JPG)
 
 ## React Bootstrap
 
