@@ -50,8 +50,8 @@ function UserActivityList(props) {
             <FontAwesomeIcon
               className="add-new-activity"
               icon={faAngleLeft}
-              onClick={(result) => {
-                props.onSubmit(result);
+              onClick={() => {
+                props.onSubmit(true);
               }}
             />
           </div>

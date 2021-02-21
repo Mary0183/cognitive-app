@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UserActivityList from "./components/UserActivityList";
-import CurrentActivity from "./components/CreateUpdateActivity";
+import CurrentActivity from "./components/CurrentActivity";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
