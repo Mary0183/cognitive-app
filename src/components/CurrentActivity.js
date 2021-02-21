@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ToggleButtonTraits from "./ToggleButtonTraits";
 import Button from "react-bootstrap/Button";
 
-import "./CreateUpdateActivity.css";
+import "./CurrentActivity.css";
 
 const emptyTraitArray = {
   nice: [],
@@ -11,7 +11,7 @@ const emptyTraitArray = {
   smart: [],
 };
 
-const CreateUpdateActivity = (props) => {
+const CurrentActivity = (props) => {
   // Set initial data to optional 'data' props, if passed, else empty
   let initialData = props.data || emptyTraitArray;
 
@@ -116,4 +116,4 @@ const CreateUpdateActivity = (props) => {
   );
 };
 
-export default CreateUpdateActivity;
+export default CurrentActivity;

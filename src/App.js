@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UserActivityList from "./components/UserActivityList";
-import CreateUpdateActivity from "./components/CreateUpdateActivity";
+import CurrentActivity from "./components/CreateUpdateActivity";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -60,7 +60,7 @@ function App() {
       <div className="grid-img-art">
         {/* onSubmit is expecting text that is passing from addAction */}
         {createUpdate && (
-          <CreateUpdateActivity
+          <CurrentActivity
             onSubmit={addAction}
             currentUpdate={currentUpdate}
             updating={updating}
