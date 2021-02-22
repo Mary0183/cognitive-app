@@ -1,6 +1,10 @@
 .ActionsDone {
   padding-left: 110px;
 }
+
+h2 {
+  margin-top: 70px;
+}
 .grid-left-arrow-button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

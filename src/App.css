@@ -3,6 +3,10 @@ body {
   background-repeat: no-repeat;
   background-color: #9ed0c9;
 }
+.App {
+  height: 820px;
+  margin-top: 80px;
+}
 
 h3 {
   color: #415164;
