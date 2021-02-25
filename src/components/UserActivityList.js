@@ -7,14 +7,6 @@ import Accordion from "./Accordion";
 import "./UserActivityList.css";
 
 function UserActivityList(props) {
-  function toggle() {
-    if (props.createUpdate === false) {
-      return true;
-    }
-    return false;
-  }
-  let result = toggle();
-
   return (
     <>
       <div className="ActionsDone">

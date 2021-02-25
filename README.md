@@ -27,13 +27,9 @@ To install react-bootstrap as a dependency, run the following command in your Re
 
 ## About
 
----
-
 WayToGo! app aims to improve the way people perceive their every day to day life in a more positive way. Through a **perfectly build form** and a **colorful checkbox** you can document activities you did during the day that made you **feel good about yourself** and then select from a list one or more positive traits or emotions that matches that activity.
 
 ## How do you document your activities and positive traits or emotions
-
----
 
 ### WayToGo! app is divided into four main parts:
 

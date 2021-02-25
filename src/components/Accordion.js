@@ -15,28 +15,28 @@ const Accordion = ({ title, children }) => {
       <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
         <div className="accordion-content">
           {
-            <>
+            <div>
               <ul>
                 {children.nice.map((trait) => (
-                  <li>{trait}</li>
+                  <li key={children}>{trait}</li>
                 ))}
               </ul>
               <ul>
                 {children.happy.map((trait) => (
-                  <li>{trait}</li>
+                  <li key={children}>{trait}</li>
                 ))}
               </ul>
               <ul>
                 {children.brave.map((trait) => (
-                  <li>{trait}</li>
+                  <li key={children}>{trait}</li>
                 ))}
               </ul>
               <ul>
                 {children.smart.map((trait) => (
-                  <li>{trait}</li>
+                  <li key={children}>{trait}</li>
                 ))}
               </ul>
-            </>
+            </div>
           }
         </div>
       </div>
