@@ -62,4 +62,8 @@ When clicking the edit button , you will be prompt to the Add Activity Page wher
 And if you would like to add a new activity, click the Add New Activity arrow
 ![alt text](src/images/ForthPart.JPG)
 
+### WayToGoApp! Flowchart
+
+![alt text](src/images/WayToGoFlowchart.JPG)
+
 : ​*This is a student project that was created at[CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.*

@@ -67,12 +67,12 @@ const CurrentActivity = (props) => {
           Write actions you did today that made you feel a positive way about
           yourself...
         </h1>
-        <form onSubmit={handleSubmit} autocomplete="off">
+        <form onSubmit={handleSubmit} autoComplete="off">
           <div className="proj-grid-form">
             <div className="grid-input">
               <label htmlFor="action">
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="actionInput"
                   type="text"
                   value={activity}
