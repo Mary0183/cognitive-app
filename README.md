@@ -64,6 +64,6 @@ And if you would like to add a new activity, click the Add New Activity arrow
 
 ### WayToGoApp! Flowchart
 
-![alt text](src/images/WayToGoFlowchart.png)
+![alt text](src/images/waytogoFlowchart.png)
 
 : ​*This is a student project that was created at[CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.*
