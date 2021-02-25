@@ -60,10 +60,10 @@ Here you have a list of well-documented activities and inside each activity thei
 When clicking the edit button , you will be prompt to the Add Activity Page where the entire activity you chose to edit will show and the positive traits will lighten up. Here you can change the action and/or add or change positive traits. When done you can click the Update button and it will prompt you back to the list page again.
 
 And if you would like to add a new activity, click the Add New Activity arrow
-![alt text](src/images/ForthPart.JPG)
+![alt text](src/images/forthPart.JPG)
 
 ### WayToGoApp! Flowchart
 
-![alt text](src/images/WayToGoFlowchart.JPG)
+![alt text](src/images/WayToGoFlowchart.PNG)
 
 : ​*This is a student project that was created at[CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona.*
