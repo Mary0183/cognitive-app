@@ -1,11 +1,28 @@
 body {
-  background-image: url("./images/BlueApp.png");
-  background-repeat: no-repeat;
-  background-color: #9ed0c9;
+  background-color: #6a7f67;
 }
 .App {
   height: 820px;
-  margin-top: 80px;
+  background-color: pink;
+  width: 1400px;
+  margin: 0 auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 546.5px 1196.5px;
+  margin-top: 40px;
+}
+
+img {
+  height: 820px;
+}
+
+.left-side-image {
+  width: 550px;
+}
+
+.grid-img-art {
+  display: grid;
 }
 
 h3 {
@@ -35,8 +52,10 @@ h3 {
 
 .grid-right-arrow-button {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: end;
+  justify-content: end;
   margin-top: 40px;
-  width: 960px;
+}
+
+.left-side-image {
+  display: grid;
 }

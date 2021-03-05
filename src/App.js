@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserActivityList from "./components/UserActivityList";
 import CurrentActivity from "./components/CurrentActivity";
+import stayPositive from "./images/stayPositive.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -57,38 +58,43 @@ function App() {
 
   return (
     <div className="App">
-      <div className="grid-img-art">
-        {/* onSubmit is expecting text that is passing from addAction */}
-        {createUpdate && (
-          <CurrentActivity
-            onSubmit={addAction}
-            currentUpdate={currentUpdate}
-            updating={updating}
-            actions={actions}
-            updateActivity={updateActivity}
-          />
-        )}
-
-        <div>
-          {!createUpdate && (
-            <UserActivityList
-              actions={actions}
-              onRemove={(index) => removeAction(index)}
-              editRow={editRow}
+      <div className="grid-container">
+        <div className="left-side-image">
+          <img src={stayPositive} />
+        </div>
+        <div className="grid-img-art">
+          {/* onSubmit is expecting text that is passing from addAction */}
+          {createUpdate && (
+            <CurrentActivity
+              onSubmit={addAction}
               currentUpdate={currentUpdate}
-              onSubmit={(i) => handleChangeView(i)}
+              updating={updating}
+              actions={actions}
+              updateActivity={updateActivity}
             />
           )}
-          <div className="grid-right-arrow-button">
-            <h3 className={!createUpdate ? "hide-see-list" : "see-list"}>
-              See List
-            </h3>
-            <div className="see-list-arrow">
-              <FontAwesomeIcon
-                className={!createUpdate ? "arrow-button" : "button"}
-                icon={faAngleRight}
-                onClick={() => handleChangeView(false)}
+
+          <div>
+            {!createUpdate && (
+              <UserActivityList
+                actions={actions}
+                onRemove={(index) => removeAction(index)}
+                editRow={editRow}
+                currentUpdate={currentUpdate}
+                onSubmit={(i) => handleChangeView(i)}
               />
+            )}
+            <div className="grid-right-arrow-button">
+              <h3 className={!createUpdate ? "hide-see-list" : "see-list"}>
+                See List
+              </h3>
+              <div className="see-list-arrow">
+                <FontAwesomeIcon
+                  className={!createUpdate ? "arrow-button" : "button"}
+                  icon={faAngleRight}
+                  onClick={() => handleChangeView(false)}
+                />
+              </div>
             </div>
           </div>
         </div>

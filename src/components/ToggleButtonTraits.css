@@ -9,10 +9,16 @@
   width: 135px;
 }
 
+.proj-grid-wrapper {
+  justify-self: center;
+}
+
 .proj-grid-grid {
   display: grid;
-  grid-template-columns: (2, 1fr);
-  width: 630px;
+  justify-content: end;
+}
+h2 {
+  text-align: center;
 }
 
 .wording-traits {
