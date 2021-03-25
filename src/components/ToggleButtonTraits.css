@@ -9,20 +9,26 @@
   width: 135px;
 }
 
+.proj-grid-grid {
+  display: grid;
+  grid-template-rows: 25% 75%;
+  align-items: center;
+  width: 853.91px;
+}
+
 .proj-grid-wrapper {
   justify-self: center;
 }
 
-.proj-grid-grid {
-  display: grid;
-  justify-content: end;
-}
 h2 {
   text-align: center;
+  color: #696f6f;
 }
 
 .wording-traits {
   text-align: center;
+  width: 620px;
+  justify-self: center;
 }
 .proj-grid {
   display: grid;
@@ -38,7 +44,7 @@ h2 {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  color: #282c34;
+  color: #696f6f;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active.nice {
@@ -54,5 +60,5 @@ h2 {
 }
 
 p {
-  color: #282c34;
+  color: #696f6f;
 }

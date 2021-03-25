@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  color: #696f6f;
 }
 
 .Form {
@@ -7,7 +8,7 @@ h1 {
   grid-template-columns: 1fr;
   grid-gap: 60px;
   justify-items: center;
-  width: 903.91px;
+  width: 853.91px;
 }
 
 label input {

@@ -1,15 +1,16 @@
 body {
-  background-color: #6a7f67;
+  /* background-color: #6a7f67; */
+  background-image: url("./images/noisyBackground.png");
 }
 .App {
   height: 820px;
-  background-color: pink;
+  background-color: #fff0f2;
   width: 1400px;
   margin: 0 auto;
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 546.5px 1196.5px;
+  grid-template-columns: 546.5px 856.5px;
   margin-top: 40px;
 }
 
@@ -23,10 +24,12 @@ img {
 
 .grid-img-art {
   display: grid;
+  padding-top: 40px;
 }
 
 h3 {
-  color: #415164;
+  justify-self: end;
+  color: #696f6f;
   font-size: 1.5rem;
 }
 
@@ -52,8 +55,9 @@ h3 {
 
 .grid-right-arrow-button {
   display: grid;
-  justify-content: end;
-  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 853.91px;
+  margin-top: 10px;
 }
 
 .left-side-image {
