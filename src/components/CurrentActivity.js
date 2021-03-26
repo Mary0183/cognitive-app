@@ -39,7 +39,7 @@ const CurrentActivity = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (traits == emptyTraitArray) {
+    if (traits === emptyTraitArray) {
       alert("Choose some traits and try again.");
       // setShow("Please fill action and traits");
     } else {

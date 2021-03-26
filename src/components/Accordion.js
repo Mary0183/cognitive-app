@@ -18,22 +18,22 @@ const Accordion = ({ title, children }) => {
             <div>
               <ul>
                 {children.nice.map((trait) => (
-                  <li key={children}>{trait}</li>
+                  <li key={trait}>{trait}</li>
                 ))}
               </ul>
               <ul>
                 {children.happy.map((trait) => (
-                  <li key={children}>{trait}</li>
+                  <li key={trait}>{trait}</li>
                 ))}
               </ul>
               <ul>
                 {children.brave.map((trait) => (
-                  <li key={children}>{trait}</li>
+                  <li key={trait}>{trait}</li>
                 ))}
               </ul>
               <ul>
                 {children.smart.map((trait) => (
-                  <li key={children}>{trait}</li>
+                  <li key={trait}>{trait}</li>
                 ))}
               </ul>
             </div>

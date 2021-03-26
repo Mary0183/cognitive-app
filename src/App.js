@@ -60,7 +60,7 @@ function App() {
     <div className="App">
       <div className="grid-container">
         <div className="left-side-image">
-          <img src={stayPositive} />
+          <img src={stayPositive} alt="cartoon battery smiling" />
         </div>
         <div className="grid-img-art">
           {/* onSubmit is expecting text that is passing from addAction */}
